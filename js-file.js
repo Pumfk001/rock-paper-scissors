@@ -14,6 +14,7 @@ function getComputerChoice () {
 function playRound (playerChoice, computerChoice){
   computerChoice = getComputerChoice ();
   playerChoice = prompt('Pick your weapon: Rock, Paper or Scissors');
+  // if (playerChoice.toLowerCase() !== 'rock' || playerChoice.toLowerCase() !== 'paper' ||playerChoice.toLowerCase() !== 'scissors') {playRound();};
 
   if (playerChoice.toLowerCase() === computerChoice) {return roundResult = "It's a draw, great minds think alike!"}
     else if (playerChoice.toLowerCase() === 'rock' && computerChoice === 'paper') {return roundResult = "You lose! Paper beats rock!"}
@@ -34,7 +35,7 @@ function game(){
       else if (roundResult.charAt(4) =='l') {++computerScore;}
   }
   if (playerScore > computerScore) {console.log('Congrats, you beat the computer ' + playerScore + ' rounds to ' + computerScore);}
-   else if (playerScore < computerScore) {console.log('Bad luck,, the computer beat you ' + computerScore + ' rounds to ' + playerScore);}
+   else if (playerScore < computerScore) {console.log('Bad luck, the computer beat you ' + computerScore + ' rounds to ' + playerScore);}
    else {console.log('It\'s a draw, '+ playerScore +' each, everyone\'s a winner!')}
 }
 
